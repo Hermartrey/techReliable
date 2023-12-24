@@ -1,0 +1,246 @@
+@import "../../styles/media-queries";
+.hero{
+    max-width: 1200px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    
+    @include tablet {
+        max-width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @include mobile {
+        display: block;
+        margin-bottom: 50px;
+    }
+    .hero-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include mobile{
+            height: 60%;
+            text-align: center;
+        }
+
+        h1{
+            font-size: 2.5rem;
+            @include tablet {
+                font-size: 2rem;
+            }
+
+            @include mobile {
+                font-size: 1rem;
+            }
+
+            p{
+                font-size: 4.5rem;
+                font-family: 'Bebas Neue', sans-serif;
+                letter-spacing: 0.4rem;
+
+                @include tablet {
+                    font-size: 3.5rem;
+                }
+
+                @include mobile {
+                    font-size: 2.5rem;
+                }
+                span{
+                    color: #1640D6;
+                }
+            }
+        }
+
+        .hero-paragraph{
+            font-size: 1rem;
+            @include tablet {
+                font-size: 0.8rem;
+            }
+            @include mobile {
+                font-size: 0.6rem;
+                margin-bottom: 10px;
+            }
+        }
+        .btn {
+            @include mobile {
+                width: 9rem;
+                height: 30px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+
+            }
+        }
+    }
+
+    .right-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        @include mobile{
+            height: 40%;
+        }
+
+        .img-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10rem;
+                background-color: #AFC8AD;
+                height: 70%;
+                width: 80%;
+                border-radius: 50%;
+                @include tablet {
+                    height: 60%;
+                }
+
+                @include mobile {
+                    height: 20rem;
+                }
+
+                img {
+                    border-radius: 10px;
+                    box-shadow: -1px 1px 10px -1px rgba(0, 0, 0, 0.66);
+                }
+        
+                .flex-container-1 {
+                    width: 24rem;
+                    height: 12.5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    @include laptop {
+                        width: 22rem;
+                        height: 11rem;
+                    }
+
+                    @include tablet {
+                        width: 20rem;
+                        height: 10rem;
+                    }
+
+                    @include mobile {
+                        width: 16rem;
+                        height: 8rem;
+                    }
+
+                    .container-1-div-1 {
+                        height: 18rem;
+                        @include laptop {
+                            height: 16rem;
+                        }
+
+                        @include tablet {
+                            height: 14rem;
+                        }
+
+                        @include mobile {
+                            height: 11rem;
+                        }
+
+                        img {
+                            height: 100%;
+                            @include laptop{
+                                height: 100%;
+                            }
+                        }
+                    }
+        
+                    .container-1-div-2 {
+                        height: 100%;
+                        @include laptop {
+                            height: 13rem;
+                        }
+
+                        @include tablet {
+                        height: 11rem;
+                        }
+
+                        @include mobile {
+                            height: 9rem;
+                        }
+                        img {
+                            height: 100%;
+                            @include laptop {
+                                height: 100%;
+                            }
+                        }
+                    }
+        
+                    div {
+                        background-color: transparent;
+                    }
+                }
+        
+                .flex-container-2 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                    gap: 20px;
+                    width: 25rem;
+                    height: 12.5rem;
+                    border-radius: 50%;
+
+                    @include laptop {
+                        width: 23rem;
+                        height: 11rem;
+                    }
+
+                    @include tablet {
+                        width: 21rem;
+                        height: 10rem;
+                    }
+
+                    @include mobile {
+                        width: 19rem;
+                        height: 8rem;
+                    }
+
+                    .container-2-div-1 {
+                        height: 12.5rem;
+                        @include laptop {
+                            height: 11rem;
+                        }
+
+                        @include tablet {
+                            height: 10rem;
+                        }
+
+                        @include mobile {
+                            height: 8rem;
+                        }
+
+                        img {
+                            height: 100%;
+                        }
+                    }
+        
+                    .container-2-div-2 {
+                        height: 9.3rem;
+                        @include laptop {
+                            height: 8rem;
+                        }
+                        @include mobile {
+                            height: 7rem;
+                        }
+                        img {
+                            height: 100%;
+                        }
+                    }
+        
+                    div {
+                        background-color: transparent;
+                    }
+                }
+        
+            }
+    }
+}

@@ -1,0 +1,76 @@
+@import '../../styles/media-queries';
+
+.services-section{
+    height: 100%;
+    max-width: 1200px;
+
+    @include mobile {
+        text-align: center;
+    }
+
+    @include tablet {
+        max-width: 600px;
+    }
+    .section-name{
+        font-size: 4rem;
+        margin-bottom: 20px;
+        font-family: 'Bebas Neue', sans-serif;
+        letter-spacing: 0.4rem;
+
+        @include tablet {
+            font-size: 3rem;
+        }
+
+        @include mobile {
+            font-size: 2rem;
+        }
+    }
+    .services{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+
+        @include tablet{
+            grid-template-columns: 1fr 1fr;
+        }
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.33);
+            height: 100%;
+            padding: 0.7rem 0.7rem;
+
+            @include mobile {
+                width: 90%;
+                place-self: center;
+            }
+
+            &:hover{
+                background: #AFC8AD;
+                transition-duration: 0.5s;
+                transition-delay: 0.2s;
+            }
+
+            img{
+                height: 5rem;
+            }
+            h1{
+                margin: 0.7rem 0;
+                font-size: 1.3rem;
+            }
+            p{
+                text-align: center;
+                font-size: 0.8rem;
+
+            }
+        }
+
+    }
+}
+    

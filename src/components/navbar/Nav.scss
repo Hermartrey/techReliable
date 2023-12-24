@@ -1,0 +1,192 @@
+@import '../../styles/colors';
+@import '../../styles/media-queries';
+
+%align-center{
+    display: flex;
+    align-items: center;
+}
+.header{
+    width: 100%;
+    height: 70px;
+    @extend %align-center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    .header__container{
+        @extend %align-center;
+        justify-content: space-between;
+        width: 43rem;
+        background-color: #213555;
+        border-radius: 2rem;
+        height: 2.5rem;
+        padding: 0 1rem;
+        @include tablet{
+            width: 70%;
+        }
+
+        .logo {
+                @extend %align-center;
+                justify-content: space-between;
+
+                
+                img {
+                    height: 50px;
+                    @include mobile {
+                        height: 40px;
+                    }
+                }
+        
+                h2 {
+                    font-size: 1rem;
+                    font-family: 'Bebas Neue', sans-serif;
+                    letter-spacing: 0.1rem;
+
+                    @include mobile {
+                        font-size: 0.8rem;
+                    }
+
+                    span {
+                        color: $primary;
+                    }
+                }
+            }
+        
+            .navigation {
+                display: flex;
+                justify-content: center;
+                
+                @include tablet {
+                    display: none;
+                }
+
+                li {
+                    list-style-type: none;
+                    margin: 0 15px;
+                    font-weight: 600;
+        
+                    .link {
+                        text-decoration: none;
+                        color: $bg-header;
+                        font-size: 1rem;
+                    }
+        
+                    a {
+                        text-decoration: none;
+                        &:hover{
+                            color: $primary;
+                        }
+                    }
+                }
+        
+            }
+            .menu{
+                display: none;
+                @include tablet {
+                    display: flex;
+                    margin-right: 2rem;
+                    cursor: pointer;
+                }
+            }
+            .social-medias {
+                gap: 10px;
+        
+                .fb {
+                    color: blue;
+                }
+        
+                .inst {
+                    color: red;
+                }
+                .x{
+                    color: #000;
+                }
+                .fb,
+                .inst,
+                .x {
+                    margin: 0 10px;
+                }
+                @include tablet {
+                    display: none;
+                }
+            }
+        }
+    #toggle {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            position: fixed;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background-color: #213555;
+            width: 40%;
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s;
+            color: $bg-header;
+        }
+
+        .toggle-navbar{
+            height: 70%;
+            width: 100%;
+            // background: red;
+            margin: auto 0;
+        }
+
+        span {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+        .navigation{
+            li{
+                list-style-type: none;
+                margin: 10px 0;
+                font-size: 1.2rem;
+                font-weight: 600;
+
+                @include mobile{
+                    font-size: 1rem;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: $bg-header;
+                }
+            }
+        }
+
+        .social-medias{
+            @include tablet{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            
+            .fb{
+                color: blue;
+            }
+            .inst{
+                color: orange;
+            }
+            .x{
+                color: #fff;
+            }
+            .fb, .inst, .x{
+                margin: 5px 0;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
